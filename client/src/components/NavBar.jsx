@@ -5,7 +5,7 @@ import shopiLatoImg from "../assets/images/shopilato_logo.svg";
 
 const NavBar = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="logo-search-cartuser-center">
         <Link to="/">
           <img src={shopiLatoImg} alt="shopilato logo" />
@@ -14,7 +14,7 @@ const NavBar = () => {
         <CartAndUser />
       </div>
       <ProductsLinksBar />
-    </div>
+    </nav>
   );
 };
 export default NavBar;
