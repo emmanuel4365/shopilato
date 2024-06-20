@@ -5,7 +5,6 @@ import facebookIcon from "../assets/images/facebook-app-round-white-icon.svg";
 
 const Footer = () => {
   let year = new Date().getFullYear().toString();
-  console.log(year);
   return (
     <footer className="footer">
       <div className="footer-center">
