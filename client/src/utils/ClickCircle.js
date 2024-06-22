@@ -24,7 +24,6 @@ export function clickCircle(e) {
       let cal = num - photoTranslate;
       item.style.transform = `translateX(${cal}%)`;
       item.dataset.translate = cal;
-      console.log(cal);
     });
   }
 }
