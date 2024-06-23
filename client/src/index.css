@@ -298,21 +298,73 @@ header {
 }
 
 .details-container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 8px; */
+  line-height: 30px;
 }
 
 .rating-review-container {
   display: flex;
   gap: 5px;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .description {
   text-align: justify;
+}
+
+.category,
+.brand {
+  font-weight: 700;
+}
+
+.In-stock {
+  color: hsl(180, 77%, 31%);
+}
+
+.Out-of-Stock {
+  color: hsl(0, 100%, 60%);
+}
+
+.color-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 5px;
+}
+
+.colors {
+  min-width: 50px;
+  display: flex;
+  gap: 5px;
+}
+
+.selectColor {
+  border: 2px solid hsl(180, 77%, 31%);
+  border-radius: 50%;
+}
+
+.deselectColor {
+  border: none;
+  border-radius: 50%;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* justify-content: center; */
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 /* ============================= */

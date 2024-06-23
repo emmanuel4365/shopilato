@@ -71,3 +71,13 @@ export const product = {
     },
   ],
 };
+
+export const UseStateProduct = {
+  id: product.id,
+  name: product.name,
+  description: product.description,
+  category: product.category,
+  brand: product.brand,
+  selectedImage: { ...product.images[0], quantity: 1 },
+  price: product.price,
+};
