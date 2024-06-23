@@ -136,6 +136,7 @@ header {
   width: 100%;
   min-height: 580px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -157,7 +158,7 @@ header {
 
 .image-container {
   overflow: hidden;
-  height: 500px;
+  height: auto;
 }
 
 .image {
@@ -304,6 +305,7 @@ header {
   justify-content: center;
   gap: 8px; */
   line-height: 30px;
+  padding: 5px;
 }
 
 .rating-review-container {
@@ -365,6 +367,123 @@ header {
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.color-label,
+.counter-label {
+  font-weight: 700;
+}
+
+.counter-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.counter-plus,
+.counter-minus {
+  width: 20px;
+  height: 20px;
+}
+
+.product-images-container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  padding: 20px;
+}
+
+.side-images {
+  width: 10%;
+  height: auto;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-image-select {
+  border: 2px solid hsl(180, 77%, 31%);
+}
+
+.side-image-deselect {
+  border: none;
+}
+
+.side-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-image {
+  width: 100%;
+  height: auto;
+}
+
+.main-images {
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image {
+  width: 70%;
+  height: auto;
+}
+
+.add-to-cart-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-to-cart-button {
+  padding: 8px 16px;
+  color: hsl(0, 100%, 100%);
+  background-color: var(--clr-background-black);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: rgb(77, 73, 73);
+}
+
+.add-rating-and-list-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-rating-and-list-center {
+  width: 95%;
+  max-width: 1270px;
+  min-height: 551px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.avatar-username-date {
+  display: flex;
+  gap: 5px;
+}
+
+.comment-rule {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 /* ============================= */

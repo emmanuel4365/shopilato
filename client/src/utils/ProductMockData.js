@@ -2,7 +2,7 @@ export const product = {
   id: "648437b38c44d52b9542e340",
   name: "Apple iPhone 13, 64GB",
   description:
-    'The product is refurbished, fully functional, and in excellent condition. Backed by the 90-day E~Shop Renewed Guarantee.\n- This pre-owned product has been professionally inspected, tested and cleaned by Amazon qualified vendors. It is not certified by Apple.\n- This product is in "Excellent condition". The screen and body show no signs of cosmetic damage visible from 12 inches away.\n- This product will have a battery that exceeds 80% capacity relative to new.\n- Accessories may not be original, but will be compatible and fully functional. Product may come in generic box.\n- Product will come with a SIM removal tool, a charger and a charging cable. Headphone and SIM card are not included.\n- This product is eligible for a replacement or refund within 90-day of receipt if it does not work as expected.\n- Refurbished phones are not guaranteed to be waterproof.',
+    'The product is refurbished, fully functional, and in excellent condition. Backed by the 90-day ShopiLato Renewed Guarantee. This pre-owned product has been professionally inspected, tested and cleaned by Amazon qualified vendors. It is not certified by Apple. This product is in "Excellent condition". The screen and body show no signs of cosmetic damage visible from 12 inches away. This product will have a battery that exceeds 80% capacity relative to new. Accessories may not be original, but will be compatible and fully functional. Product may come in generic box. Product will come with a SIM removal tool, a charger and a charging cable. Headphone and SIM card are not included. This product is eligible for a replacement or refund within 90-day of receipt if it does not work as expected. Refurbished phones are not guaranteed to be waterproof.',
   price: 40,
   brand: "Apple",
   category: "Phone",
@@ -38,7 +38,7 @@ export const product = {
       createdDate: "2023-06-26T15:53:44.483Z",
       user: {
         id: "6499b184b0e9a8c8709821d3",
-        name: "Chaoo",
+        name: "Emma",
         email: "example1@gmail.com",
         emailVerified: null,
         image:
@@ -58,7 +58,7 @@ export const product = {
       createdDate: "2023-06-26T14:30:40.998Z",
       user: {
         id: "6475af156bad4917456e6e1e",
-        name: "Charles",
+        name: "Omale",
         email: "example@gmail.com",
         emailVerified: null,
         image:

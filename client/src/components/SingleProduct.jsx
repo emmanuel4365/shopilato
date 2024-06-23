@@ -1,9 +1,11 @@
 import { Rating } from "@mui/material";
 import HorizontalRule from "./HorizontalRule";
 import { useCallback, useState } from "react";
-import { UseStateProduct } from "../utils/ProductMockData";
+import { UseStateProduct, product } from "../utils/ProductMockData";
 import SetColor from "./SetColor";
 import SetQuantity from "./SetQuantity";
+import Button from "./Button";
+import ProductImages from "./ProductImages";
 
 const SingleProduct = ({ data }) => {
   const [cartProduct, setCartProduct] = useState(UseStateProduct);
@@ -23,7 +25,7 @@ const SingleProduct = ({ data }) => {
   const handleQtyDecrease = useCallback(() => {
     let counterQuantity = document.querySelector(".counter-quantity");
 
-    if (Number(counterQuantity.textContent) === 0) {
+    if (Number(counterQuantity.textContent) === 1) {
       return;
     }
 
@@ -52,7 +54,13 @@ const SingleProduct = ({ data }) => {
 
   return (
     <div className="product-container">
-      <div className="image-container">Image</div>
+      <div className="image-container">
+        <ProductImages
+          cartProduct={cartProduct}
+          product={product}
+          handleColorSelect={handleColorSelect}
+        />
+      </div>
       <div className="details-container">
         <h2 className="details-heading">{data.name}</h2>
         <div className="rating-review-container">
@@ -89,7 +97,15 @@ const SingleProduct = ({ data }) => {
           cartCounterLabel={false}
         />
         <HorizontalRule data={100} />
-        <button>add to cart</button>
+        <div className="add-to-cart-btn-container">
+          <Button
+            classValue="add-to-cart-button"
+            label="Add To Cart"
+            Icon=""
+            onClick={() => {}}
+            disabled={false}
+          />
+        </div>
       </div>
     </div>
   );
