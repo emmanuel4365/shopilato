@@ -12,7 +12,7 @@ const ProductCard = ({ data }) => {
 
   const productRating = result / data.reviews.length;
 
-  let { name, images } = data;
+  let { model, images } = data;
   return (
     <div
       className="product-card"
@@ -21,11 +21,11 @@ const ProductCard = ({ data }) => {
       <div className="product-image-container">
         <img
           src={images[0].image}
-          alt={shortenString(name)}
+          alt={shortenString(model)}
           className="product-image"
         />
       </div>
-      <p className="product-name">{shortenString(name)}</p>
+      <p className="product-name">{shortenString(model)}</p>
       <Rating value={productRating} readOnly />
       <div className="product-reviews">
         {data.reviews.length} review{data.reviews > 1 ? "s" : ""}

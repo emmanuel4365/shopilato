@@ -1,6 +1,7 @@
 import { Rating } from "@mui/material";
 import Heading from "./Heading";
 import moment from "moment";
+import Avatar from "./Avatar";
 
 const ListRating = ({ product }) => {
   return (
@@ -12,14 +13,14 @@ const ListRating = ({ product }) => {
             return (
               <div className="review" key={review.id}>
                 <div className="avatar-username-date">
-                  <div className="avatar">Avatar</div>
+                  <Avatar src={review?.user.image} />
                   <div className="user-name">{review?.user.name}</div>
                   <div className="moment">{moment(review).fromNow()}</div>
                 </div>
                 <div className="rating-comment-container">
                   <Rating value={review.rating} readOnly />
                   <div>{review.comment}</div>
-                  <hr className="comment-rule" />
+                  <hr className="comment-rule" width="500px" />
                 </div>
               </div>
             );

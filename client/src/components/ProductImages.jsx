@@ -22,7 +22,7 @@ const ProductImages = ({ cartProduct, product, handleColorSelect }) => {
         <img
           className="main-image"
           src={cartProduct.selectedImage.image}
-          alt={cartProduct.name}
+          alt={cartProduct.model}
         />
       </div>
     </div>

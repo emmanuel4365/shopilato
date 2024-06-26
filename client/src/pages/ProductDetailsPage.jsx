@@ -1,4 +1,5 @@
 import { ListRating, SingleProduct } from "../components";
+
 import { product } from "../utils/ProductMockData";
 
 export const loader = ({ params }) => {

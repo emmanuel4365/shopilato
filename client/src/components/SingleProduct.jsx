@@ -1,13 +1,25 @@
 import { Rating } from "@mui/material";
 import HorizontalRule from "./HorizontalRule";
 import { useCallback, useState } from "react";
-import { UseStateProduct, product } from "../utils/ProductMockData";
 import SetColor from "./SetColor";
 import SetQuantity from "./SetQuantity";
 import Button from "./Button";
 import ProductImages from "./ProductImages";
+import { useCartDispatch } from "../context/CartContextProvider";
+import { toast } from "react-toastify";
 
 const SingleProduct = ({ data }) => {
+  // console.log(data);
+  const UseStateProduct = {
+    id: data.id,
+    model: data.model,
+    description: data.description,
+    category: data.category,
+    brand: data.brand,
+    selectedImage: { ...data.images[0], quantity: 1 },
+    price: data.price,
+  };
+
   const [cartProduct, setCartProduct] = useState(UseStateProduct);
   const [productQuantity, setProductQuantity] = useState(
     cartProduct.selectedImage.quantity
@@ -15,6 +27,7 @@ const SingleProduct = ({ data }) => {
 
   const handleQtyIncrease = useCallback(() => {
     let counterQuantity = document.querySelector(".counter-quantity");
+    console.log(counterQuantity.textContent);
 
     setProductQuantity((productQuantity) => {
       productQuantity = productQuantity + 1;
@@ -24,6 +37,7 @@ const SingleProduct = ({ data }) => {
 
   const handleQtyDecrease = useCallback(() => {
     let counterQuantity = document.querySelector(".counter-quantity");
+    console.log(counterQuantity.textContent);
 
     if (Number(counterQuantity.textContent) === 1) {
       return;
@@ -34,6 +48,26 @@ const SingleProduct = ({ data }) => {
       return (counterQuantity.textContent = productQuantity);
     });
   }, [cartProduct]);
+
+  let dispatch = useCartDispatch();
+
+  const addToCart = () => {
+    let counterQuantity = document.querySelector(".counter-quantity");
+
+    let quantity = counterQuantity.textContent;
+
+    cartProduct.selectedImage.quantity = quantity;
+
+    dispatch({ type: "ADD", payload: cartProduct });
+
+    toast("Added to cart successfully! Please check your cart ☝️", {
+      position: "top-center",
+      theme: "light",
+    });
+
+    console.log(cartProduct);
+    return;
+  };
 
   const result = data.reviews.reduce((acc, item) => {
     return acc + item.rating;
@@ -46,7 +80,7 @@ const SingleProduct = ({ data }) => {
   const handleColorSelect = useCallback(
     (selectedImage) => {
       setCartProduct((prev) => {
-        return { ...prev, selectedImage };
+        return { ...prev, selectedImage: { ...selectedImage, quantity: 1 } };
       });
     },
     [cartProduct.selectedImage]
@@ -54,10 +88,10 @@ const SingleProduct = ({ data }) => {
 
   return (
     <div className="product-container">
-      <div className="image-container">
+      <div className="images-container">
         <ProductImages
           cartProduct={cartProduct}
-          product={product}
+          product={data}
           handleColorSelect={handleColorSelect}
         />
       </div>
@@ -102,7 +136,7 @@ const SingleProduct = ({ data }) => {
             classValue="add-to-cart-button"
             label="Add To Cart"
             Icon=""
-            onClick={() => {}}
+            onClick={() => addToCart()}
             disabled={false}
           />
         </div>
@@ -110,4 +144,5 @@ const SingleProduct = ({ data }) => {
     </div>
   );
 };
+
 export default SingleProduct;

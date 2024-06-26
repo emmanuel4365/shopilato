@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { HomeBanner, ProductCard } from "../components";
-import { rightClick } from "../utils/RightArrow";
+// import { rightClick } from "../utils/RightArrow";
 import { products } from "../utils/products";
 
 const LandingPage = () => {
@@ -16,7 +16,7 @@ const LandingPage = () => {
           <h1>All Products</h1>
           <div className="products-container">
             {products.map((product) => {
-              return <ProductCard data={product} key={product.name} />;
+              return <ProductCard data={product} key={product.model} />;
             })}
           </div>
         </section>

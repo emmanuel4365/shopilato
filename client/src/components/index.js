@@ -12,6 +12,7 @@ import Button from "./Button";
 import ProductImages from "./ProductImages";
 import ListRating from "./ListRating";
 import Heading from "./Heading";
+import Avatar from "./Avatar";
 
 export {
   NavBar,
@@ -28,4 +29,5 @@ export {
   ProductImages,
   ListRating,
   Heading,
+  Avatar,
 };
