@@ -27,17 +27,17 @@ const SingleProduct = ({ data }) => {
 
   const handleQtyIncrease = useCallback(() => {
     let counterQuantity = document.querySelector(".counter-quantity");
-    console.log(counterQuantity.textContent);
 
     setProductQuantity((productQuantity) => {
       productQuantity = productQuantity + 1;
-      return (counterQuantity.textContent = productQuantity);
+      counterQuantity.textContent = productQuantity;
+      console.log(counterQuantity.textContent);
+      return productQuantity;
     });
   }, [cartProduct]);
 
   const handleQtyDecrease = useCallback(() => {
     let counterQuantity = document.querySelector(".counter-quantity");
-    console.log(counterQuantity.textContent);
 
     if (Number(counterQuantity.textContent) === 1) {
       return;
@@ -45,7 +45,9 @@ const SingleProduct = ({ data }) => {
 
     setProductQuantity((productQuantity) => {
       productQuantity = productQuantity - 1;
-      return (counterQuantity.textContent = productQuantity);
+      counterQuantity.textContent = productQuantity;
+      console.log(counterQuantity.textContent);
+      return productQuantity;
     });
   }, [cartProduct]);
 
